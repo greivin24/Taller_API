@@ -1,0 +1,43 @@
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+    <mat-drawer #drawer [mode]="side">
+
+        <div class="card bg-dark text-white side-image">
+            <img src="assets/bgCard.jpg" class="card-img">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Material App</h5>
+                <p class="card-text">Dashboard and Backoffice</p>
+            </div>
+        </div>
+        <mat-list>
+            <h3 mat-subheader>Acciones</h3>
+            <mat-list-item *ngFor="let item of generalActions">
+                <mat-icon mat-list-icon>arrow_forward_ios</mat-icon>
+                <h4 mat-line>{{item.name}}</h4>
+                <p mat-line> {{item.description}} </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <h3 mat-subheader>Sesión</h3>
+            <mat-list-item (click)="openSnackBar()">
+                <mat-icon mat-list-icon>person</mat-icon>
+                <h4 mat-line>Cerrar sesión</h4>
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <button (click)="drawer.toggle()" matTooltip="Mostrar barra lateral" color="primary" mat-flat-button aria-label="toggle sidebar">
+                    <mat-icon>dehaze</mat-icon>
+                </button>
+                <span>Angular Material</span>
+                <span class="example-spacer"></span>
+                <button color="primary" matTooltip="Ver notificaciones" mat-flat-button aria-label="toggle sidebar">
+                    <mat-icon>error</mat-icon>
+                </button>
+                <button color="primary" matTooltip="Más acciones" mat-flat-button aria-label="toggle sidebar">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </mat-drawer-content>
+</mat-drawer-container>
