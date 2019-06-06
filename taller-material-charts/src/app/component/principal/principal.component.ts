@@ -21,11 +21,98 @@ const NAMES: string[] = [
 })
 export class PrincipalComponent implements OnInit {
  
+  public multi = [
+    {
+      "name": "PHP",
+      "series": [
+        {
+          "name": "2016",
+          "value": 85000
+        },
+        {
+          "name": "2017",
+          "value": 85000
+        },
+        {
+          "name": "2018",
+          "value": 80000
+        },
+        {
+          "name": "2019",
+          "value": 55000
+        }
+      ]
+    },
+  
+    {
+      "name": "C#",
+      "series": [
+        {
+          "name": "2016",
+          "value": 90000
+        },
+        {
+          "name": "2017",
+          "value": 100000
+        },
+        {
+          "name": "2018",
+          "value": 70000
+        },
+        {
+          "name": "2019",
+          "value": 70000
+        }
+      ]
+    },
+  
+    {
+      "name": "Angular",
+      "series": [
+        {
+          "name": "2016",
+          "value": 80000
+        },
+        {
+          "name": "2017",
+          "value": 90000
+        },
+        {
+          "name": "2018",
+          "value": 100000
+        },
+        {
+          "name": "2019",
+          "value": 120000
+        }
+      ]
+    }
+  ];
+  
+  
+    view: any[] = [400, 200];
+   
+    showXAxis = true;
+    showYAxis = true;
+    gradient = true;
+    showLegend = false;
+    showXAxisLabel = false;
+    xAxisLabel = 'Number';
+    showYAxisLabel = true;
+    yAxisLabel = 'Salarios en dolares';
+    timeline = true;
+  
+    colorScheme = {
+      domain: ['#A10A28','#C7B42C','#5AA454',   '#AAAAAA']
+    };
+   
+    autoScale = true;
+
   displayedColumns: string[] = ['Id', 'Nombre', 'Nota'];
   dataSource: MatTableDataSource<UserData>;
 
-  @ViewChild(MatPaginator, {static:false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static:false}) sort: MatSort;
+  @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static:true}) sort: MatSort;
 
   constructor() {
 

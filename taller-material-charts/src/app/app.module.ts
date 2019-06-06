@@ -13,6 +13,7 @@ import { PrincipalComponent } from './component/principal/principal.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -35,6 +36,8 @@ import {MatInputModule} from '@angular/material';
     MatFormFieldModule,
     MatPaginatorModule,
     MatInputModule,
+    NgxChartsModule 
+
   ],
   providers: [],
   bootstrap: [AppComponent]
