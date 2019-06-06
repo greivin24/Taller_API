@@ -3,17 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatSnackBarModule, MatListModule } from  '@angular/material';
+import { MatButtonModule, MatSnackBarModule, MatListModule, MatCardModule } from  '@angular/material';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { PrincipalComponent } from './component/principal/principal.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule, 
@@ -24,7 +26,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatIconModule,
     MatTooltipModule,
     MatSnackBarModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

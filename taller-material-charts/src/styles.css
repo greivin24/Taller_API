@@ -5,3 +5,41 @@
 /* @import "~@angular/material/prebuilt-themes/deeppurple-amber.css"; */
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+.mat-drawer-container {
+    background-color: #D1C4E9;
+}
+
+.order-card {
+    color: #fff;
+}
+
+.bg-c-first {
+    background: linear-gradient(45deg, #512DA8, rgb(148, 105, 223));
+}
+
+.bg-c-second {
+    background: linear-gradient(45deg, #4099ff, #73b4ff);
+}
+
+.bg-c-third {
+    background: linear-gradient(45deg, #FFB64D, #ffcb80);
+}
+
+.bg-c-fourth {
+    background: linear-gradient(45deg, #FF5370, #ff869a);
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.order-card i {
+    font-size: 26px;
+}
